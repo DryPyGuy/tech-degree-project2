@@ -1,15 +1,31 @@
+from copy import deepcopy
+from constants import PLAYERS
+from constants import TEAMS
 
-if __name__ == "__main__":
 
-	import constants.py
+players_copy = deepcopy(PLAYERS)
+teams_copy = TEAMS
 
-	clean_data(PLAYERS)
+print(players_copy)
 
-	players_new_collection = []
+# Experience: This should be saved as a boolean value (True or False)
 
-	def clean_data(name, guardians, experience, height):
-		# clean the player data without changing the original data
-		# Data to be cleaned: Height: This should be saved as an integer. Experience: This should be saved as a boolean value (True or False)
+for player in players_copy:  # loop through the copy
+    if player["experience"] == "YES":  # if that player has experaince set to the string "Yes"
+        player["experience"] = True    # change it to True
+    elif player["experience"] == "NO":  # if that player has experaince set to the string "NO"
+        player["experience"] = False    # change it to False
+
+# Height: This should be saved as an integer.
+
+for player in players_copy:
+	player["height"] = int(player["height"][0:2])
+
+print(players_copy)
+
+		# clean the player data without changing the original data (check)
+		# Data to be cleaned: Height: This should be saved as an integer. 
+		# Experience: This should be saved as a boolean value (True or False) (Check)
 		
 		# save it to a new collection - build a new collection with what you have learned up to this point.
 		

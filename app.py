@@ -4,7 +4,12 @@ from constants import TEAMS
 
 
 players_copy = deepcopy(PLAYERS)
-teams = [panthers = [], bandits = [], warriors = []]
+
+panthers = []
+
+bandits = []
+
+warriors = []
 
 print(players_copy)
 
@@ -26,12 +31,39 @@ for player in players_copy:
 	# HINT: To find out how many players should be on each team, divide the length of players by the number of teams. Ex: num_players_team = len(PLAYERS) / len(TEAMS)
 
 
-def Balance_Teams(team):
-	# Balance the players across the three teams: Panthers, Bandits and Warriors.
-	while times <= num_of_players:
-		for player in players_copy:
-			team.append(player)
-			times += 1
+# def Balance_Teams(team):
+# 	# Balance the players across the three teams: Panthers, Bandits and Warriors.
+# 	while times <= num_of_players:
+# 		for player in players_copy:
+# 			team.pop(player)
+# 			times += 1
+
+num_of_players = len(players_copy) / len(TEAMS)
+
+for player in players_copy:
+	if len(panthers) == len(bandits):
+		panthers.append(players_copy)
+	elif len(warriors) < len(panthers)
+
+# def balance_teams(players):
+#     #the team balancing function
+#     for player in players_copy:
+#         if player['experience'] == True:
+#             if len(team_panthers) == len(team_bandits):
+#                 team_panthers.append(player)
+#             elif len(team_warriors) < len(team_panthers):
+#                 team_warriors.append(player)
+#             else:
+#                 team_bandits.append(player)
+#     for player in players:
+#         if player['experience'] == False:
+#             if len(team_panthers) == len(team_bandits):
+#                 team_panthers.append(player)
+#             elif len(team_warriors) < len(team_panthers):
+#                 team_warriors.append(player)
+#             else:
+#                 team_bandits.append(player)
+
 
 
 		

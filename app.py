@@ -5,11 +5,6 @@ from constants import TEAMS
 
 players_copy = deepcopy(PLAYERS)
 teams = [panthers = [], bandits = [], warriors = []]
-#team_copy = TEAMS
-#Teams
-#panthers = []
-#bandits = []
-#warriors = []
 
 print(players_copy)
 
@@ -31,12 +26,12 @@ for player in players_copy:
 	# HINT: To find out how many players should be on each team, divide the length of players by the number of teams. Ex: num_players_team = len(PLAYERS) / len(TEAMS)
 
 
-def Balance_Teams():
-	num_of_players = len(players_copy) / 3
+def Balance_Teams(team):
 	# Balance the players across the three teams: Panthers, Bandits and Warriors.
-	for team in teams:
+	while times <= num_of_players:
 		for player in players_copy:
 			team.append(player)
+			times += 1
 
 
 		
